@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -8,6 +9,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "geist-sans": [
+          "var(--font-geist-sans)",
+          ...defaultTheme.fontFamily.sans,
+        ],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
