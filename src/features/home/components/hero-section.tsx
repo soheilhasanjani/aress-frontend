@@ -14,7 +14,7 @@ const PROFILE_SRC =
 const HeroSection = () => {
   const { data } = useSuspenseQuery(getHeroSectionOption);
   return (
-    <div className="pb-16">
+    <div className="lg:pb-16 relative">
       <div className="aspect-[1216/600] relative">
         <Image
           src={IMAGE_SRC}
@@ -25,28 +25,28 @@ const HeroSection = () => {
           priority
         />
         <div className="bg-[rgba(20,22,36,0.4)] size-full absolute top-0 start-0 rounded-xl" />
-        <div className="bg-white absolute -bottom-16 start-16 w-1/2 shadow-[0_12px_24px_-6px_rgb(24_26_42_/_12%)] p-10 rounded-xl">
-          <div className="bg-[#4B6BFB] rounded-md text-white text-sm px-2.5 py-1 w-fit mb-4">
-            Technology
+      </div>
+      <div className="bg-white lg:absolute bottom-0 start-16 w-full lg:w-1/2 shadow-[0_12px_24px_-6px_rgb(24_26_42_/_12%)] p-10 rounded-xl">
+        <div className="bg-[#4B6BFB] rounded-md text-white text-sm px-2.5 py-1 w-fit mb-4">
+          Technology
+        </div>
+        <div className="mb-6 text-[#181A2A] text-4xl font-semibold line-clamp-3">
+          {data.title}
+        </div>
+        <div className="flex items-center gap-3">
+          <Image
+            src={PROFILE_SRC}
+            width={36}
+            height={36}
+            className="size-9 object-cover rounded-full"
+            alt="profile-image"
+            priority
+          />
+          <div className="text-[#97989F] text-base font-medium">
+            Jason Francisco
           </div>
-          <div className="mb-6 text-[#181A2A] text-4xl font-semibold line-clamp-3">
-            {data.title}
-          </div>
-          <div className="flex items-center gap-3">
-            <Image
-              src={PROFILE_SRC}
-              width={36}
-              height={36}
-              className="size-9 object-cover rounded-full"
-              alt="profile-image"
-              priority
-            />
-            <div className="text-[#97989F] text-base font-medium">
-              Jason Francisco
-            </div>
-            <div className="text-[#97989F] text-base font-normal">
-              August 20, 2022
-            </div>
+          <div className="text-[#97989F] text-base font-normal">
+            August 20, 2022
           </div>
         </div>
       </div>

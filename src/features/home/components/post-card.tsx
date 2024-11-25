@@ -47,8 +47,10 @@ const PostCard: React.FC<PostCardProps> = (props) => {
             alt="profile-image"
             priority
           />
-          <div className="text-[#97989F] text-base font-medium">{fullname}</div>
-          <div className="text-[#97989F] text-base font-normal">
+          <div className="text-[#97989F] text-base font-medium truncate">
+            {fullname}
+          </div>
+          <div className="text-[#97989F] text-base font-normal truncate">
             {createDate}
           </div>
         </div>

@@ -6,7 +6,7 @@ const LayoutFooter = () => {
     <div className="bg-[#F6F6F7] border-t border-[#E8E8EA] py-16">
       <div className="container">
         <div className="grid grid-cols-12 gap-8">
-          <div className="col-span-4">
+          <div className="col-span-12 lg:col-span-4">
             <div className="text-[#181A2A] text-base font-semibold mb-3">
               About
             </div>
@@ -24,7 +24,7 @@ const LayoutFooter = () => {
               123 456 789
             </div>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-6 lg:col-span-2">
             <div className="text-[#181A2A] text-base font-semibold mb-6">
               Quick Link
             </div>
@@ -50,7 +50,7 @@ const LayoutFooter = () => {
               })}
             </ul>
           </div>
-          <div className="col-span-2">
+          <div className="col-span-6 lg:col-span-2">
             <div className="text-[#181A2A] text-base font-semibold mb-6">
               Category
             </div>
@@ -76,7 +76,7 @@ const LayoutFooter = () => {
               })}
             </ul>
           </div>
-          <div className="col-span-4">
+          <div className="col-span-12 lg:col-span-4">
             <div className="bg-[#FFFFFF] rounded-xl p-9">
               <div className="text-[#181A2A] text-xl font-semibold text-center mb-2">
                 Weekly Newsletter
