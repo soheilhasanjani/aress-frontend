@@ -5,7 +5,7 @@ import SearchBox from "./search-box";
 
 const LayoutHeader = () => {
   return (
-    <header className="h-[100px] py-8">
+    <header className="h-[100px] py-8 sticky top-0 bg-white">
       <div className="container">
         <div className="flex items-center justify-between">
           <Logo className="w-[158px] h-[36px]" />

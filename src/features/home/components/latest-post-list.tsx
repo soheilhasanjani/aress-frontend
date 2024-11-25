@@ -14,7 +14,6 @@ const PROFILE_SRC =
 const LatestPostList = () => {
   //
   const { data } = useSuspenseQuery(getLatestPostsOption);
-  console.log(data);
   //
   return (
     <div className="grid grid-cols-12 gap-5">

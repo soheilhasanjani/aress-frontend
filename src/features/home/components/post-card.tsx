@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 interface PostCardProps {
-  id: string;
+  id: number;
   image: string;
   category: string;
   title: string;

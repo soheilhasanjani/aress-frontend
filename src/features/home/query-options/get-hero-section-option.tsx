@@ -1,6 +1,10 @@
 import { queryOptions } from "@tanstack/react-query";
 
-const getHeroSectionOption = queryOptions({
+interface Response {
+  title: string;
+}
+
+const getHeroSectionOption = queryOptions<Response>({
   queryKey: ["hero-section"],
   queryFn: async () => {
     const response = await fetch(
@@ -9,7 +13,6 @@ const getHeroSectionOption = queryOptions({
 
     return response.json();
   },
-  staleTime: 60 * 1000,
 });
 
 export default getHeroSectionOption;
